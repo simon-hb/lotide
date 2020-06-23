@@ -7,6 +7,9 @@ const assertEqual = function(actual, expected) {
 };
 
 const eqArrays = function(arrayOne, arrayTwo) {
+  if (typeof(arrayOne) !== 'object' || typeof(arrayTwo) !== 'object') {
+    return false;
+  }
   if (arrayOne.length !== arrayTwo.length) {
     return false;
   }
