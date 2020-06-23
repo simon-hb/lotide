@@ -1,4 +1,4 @@
-const eqArrays = function(arrayOne, arrayTwo) {
+const assertArraysEqual = function(arrayOne, arrayTwo) {
   if (typeof(arrayOne) !== 'object' || typeof(arrayTwo) !== 'object') {
     return `🛑🛑🛑Assertion Failed: ${arrayOne} ==== ${arrayTwo}`;
   }
@@ -13,8 +13,8 @@ const eqArrays = function(arrayOne, arrayTwo) {
   return `✅✅✅Assertion Passed: ${arrayOne} ==== ${arrayTwo}`;
 };
 
-console.log(eqArrays([1, 2, 3], [1, 2, 3]));
-console.log(eqArrays([1, 2, 3], [1, 2, '3']));
-console.log(eqArrays([1, 2, 3], [3, 2, 1]));
-console.log(eqArrays([1, 2, 3], [1, 2, 3, 4]));
-console.log(eqArrays(['a', 'b', 'c'], 'abc'));
+console.log(assertArraysEqual([1, 2, 3], [1, 2, 3]));
+console.log(assertArraysEqual([1, 2, 3], [1, 2, '3']));
+console.log(assertArraysEqual([1, 2, 3], [3, 2, 1]));
+console.log(assertArraysEqual([1, 2, 3], [1, 2, 3, 4]));
+console.log(assertArraysEqual(['a', 'b', 'c'], 'abc'));
