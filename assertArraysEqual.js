@@ -1,5 +1,5 @@
 const assertArraysEqual = function(arrayOne, arrayTwo) {
-  if (typeof(arrayOne) !== 'object' || typeof(arrayTwo) !== 'object') {
+  if (Array.isArray(arrayOne) === false || Array.isArray(arrayTwo) === false) {
     return `🛑🛑🛑Assertion Failed: ${arrayOne} ==== ${arrayTwo}`;
   }
   if (arrayOne.length !== arrayTwo.length) {
