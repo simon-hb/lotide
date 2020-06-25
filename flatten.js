@@ -15,11 +15,11 @@ const flatten = function(arrayElements) {
 console.log(flatten([1, 2, [3, 4], 5, [6]]));
 console.log(flatten(['a', 'b', ['a', 'm'], 'x', ['o']]))
 
-const assertArraysEqual = function(arrayOne, arrayTwo) {
-  if (eqArrays(arrayOne, arrayTwo)) {
-    return `✅✅✅Assertion Passed: ${arrayOne} === ${arrayTwo}`;
+const assertArraysEqual = function(actual, expected) {
+  if (eqArrays(actual, expected)) {
+    return `✅✅✅Assertion Passed: ${actual} === ${expected}`;
   }
-  return `🛑🛑🛑Assertion Failed: ${arrayOne} === ${arrayTwo}`;
+  return `🛑🛑🛑Assertion Failed: ${actual} === ${expected}`;
 };
 
 const eqArrays = function(arrayOne, arrayTwo) {

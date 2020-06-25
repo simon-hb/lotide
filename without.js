@@ -15,11 +15,11 @@ const without = function(source, itemsToRemove) {
   return filteredArray;
   */
 
- const assertArraysEqual = function(arrayOne, arrayTwo) {
-  if (eqArrays(arrayOne, arrayTwo)) {
-    return `✅✅✅Assertion Passed: ${arrayOne} === ${arrayTwo}`;
+ const assertArraysEqual = function(actual, expected) {
+  if (eqArrays(actual, expected)) {
+    return `✅✅✅Assertion Passed: ${actual} === ${expected}`;
   }
-  return `🛑🛑🛑Assertion Failed: ${arrayOne} === ${arrayTwo}`;
+  return `🛑🛑🛑Assertion Failed: ${actual} === ${expected}`;
 };
 
 const eqArrays = function(arrayOne, arrayTwo) {
