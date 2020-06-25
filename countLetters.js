@@ -20,4 +20,4 @@ const countLetters = function (stringInput) {
 };
 
 console.log(countLetters('hi my name is simon'));
-console.log(assertEqual(countLetters('hahaha')['h'], 3));
+assertEqual(countLetters('hahaha')['h'], 3);

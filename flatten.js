@@ -12,14 +12,12 @@ const flatten = function(arrayElements) {
   return outputArray;
 };
 
-console.log(flatten([1, 2, [3, 4], 5, [6]]));
-console.log(flatten(['a', 'b', ['a', 'm'], 'x', ['o']]))
-
 const assertArraysEqual = function(actual, expected) {
   if (eqArrays(actual, expected)) {
-    return `✅✅✅Assertion Passed: ${actual} === ${expected}`;
+    console.log(`✅✅✅Assertion Passed: ${actual} === ${expected}`);
+  } else {
+    console.log(`🛑🛑🛑Assertion Failed: ${actual} === ${expected}`);
   }
-  return `🛑🛑🛑Assertion Failed: ${actual} === ${expected}`;
 };
 
 const eqArrays = function(arrayOne, arrayTwo) {
@@ -36,3 +34,7 @@ const eqArrays = function(arrayOne, arrayTwo) {
   }
   return true;
 };
+
+console.log(flatten([1, 2, [3, 4], 5, [6]]));
+console.log(flatten(['a', 'b', ['a', 'm'], 'x', ['o']]))
+assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]]), [ 1, 2, 3, 4, 5, 6 ]);
