@@ -27,7 +27,11 @@ const eqArrays = function(arrayOne, arrayTwo) {
     return false;
   }
   for (let i = 0; i < arrayOne.length; i++) {
-    if (arrayOne[i] !== arrayTwo[i]) {
+    if (Array.isArray(arrayOne[i])) {
+      if (!eqArrays(arrayOne[i], arrayTwo[i])) {
+        return false;
+      }
+    } else if (arrayOne[i] !== arrayTwo[i]) {
       return false;
     }
   }
