@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@sjung/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "sjung lotide library",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -19,7 +19,7 @@
     "type": "git",
     "url": "git+https://github.com/simon-hb/lotide.git"
   },
-  "author": "",
+  "author": "Simon Jung",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/simon-hb/lotide/issues"
