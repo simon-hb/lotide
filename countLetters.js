@@ -19,5 +19,7 @@ const countLetters = function (stringInput) {
   return results;
 };
 
+module.exports = countLetters;
+
 console.log(countLetters('hi my name is simon'));
 assertEqual(countLetters('hahaha')['h'], 3);

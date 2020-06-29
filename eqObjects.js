@@ -45,6 +45,8 @@ const eqArrays = function(arrayOne, arrayTwo) {
   return true;
 };
 
+module.exports = eqObjects;
+
 const ab = { a: "1", b: "2" };
 const ba = { b: "2", a: "1" };
 eqObjects(ab, ba); // => true
