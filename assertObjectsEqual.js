@@ -1,3 +1,5 @@
+const eqObjects = require('./eqObjects');
+
 const assertObjectsEqual = function(actual, expected) {
   const inspect = require('util').inspect;
   if (eqObjects(actual, expected)) {
@@ -8,45 +10,6 @@ const assertObjectsEqual = function(actual, expected) {
 };
 
 module.exports = assertObjectsEqual;
-
-const eqObjects = function(object1, object2) {
-  if (Object.keys(object1).length !== Object.keys(object2).length) {
-    return false;
-  }
-  for (let key in object1) {
-    if (typeof(object1[key]) === 'object' && !Array.isArray(object1[key])) {
-      if (!eqObjects(object1[key], object2[key])) {
-        return false;
-      }
-    } else if (Array.isArray(object1[key])) {
-      if (!eqArrays(object1[key], object2[key])) {
-        return false;
-      }
-    } else if (object1[key] !== object2[key]) {
-      return false;
-    }
-  }
-  return true;
-};
-
-const eqArrays = function(arrayOne, arrayTwo) {
-  if (Array.isArray(arrayOne) === false || Array.isArray(arrayTwo) === false) {
-    return false;
-  }
-  if (arrayOne.length !== arrayTwo.length) {
-    return false;
-  }
-  for (let i = 0; i < arrayOne.length; i++) {
-    if (Array.isArray(arrayOne[i])) {
-      if (!eqArrays(arrayOne[i], arrayTwo[i])) {
-        return false;
-      }
-    } else if (arrayOne[i] !== arrayTwo[i]) {
-      return false;
-    }
-  }
-  return true;
-};
 
 const ab = { a: "1", b: "2" };
 const ba = { b: "2", a: "1" };
